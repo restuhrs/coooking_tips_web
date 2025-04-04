@@ -41,26 +41,36 @@
         <h2>Pilih Resep Makanan Favorit Kamu</h2>
         <div class="scroll-wrapper">
             <div class="categories">
-                <div class="category">
-                    <img src="images/Nasi Goreng.jpeg" alt="Nasi Goreng">
-                    <h3><a href="recipe.html">Nasi Goreng</a></h3>
-                </div>
-                <div class="category">
-                    <img src="images/Martabak manis.jpeg" alt="Martabak">
-                    <h3><a href="recipe.html">Martabak Manis</a></h3>
-                </div>
-                <div class="category">
-                    <img src="images/Pangsit mie bakso.jpeg" alt="Dessert">
-                    <h3><a href="recipe.html">Pangsit Mie Bakso</a></h3>
-                </div>
-                <div class="category">
-                    <img src="images/Pempek Palembang.jpeg" alt="Dessert">
-                    <h3><a href="recipe.html">Pempek</a></h3>
-                </div>
-                <div class="category">
-                    <img src="images/Bakpao.jpeg" alt="Dessert">
-                    <h3><a href="recipe.html">Bakpao</a></h3>
-                </div>
+                <a href="recipe.html" class="category-link">
+                    <div class="category">
+                        <img src="images/Nasi Goreng.jpeg" alt="Nasi Goreng">
+                        <h3>Nasi Goreng</h3>
+                    </div>
+                </a>
+                <a href="#" class="category-link">
+                    <div class="category">
+                        <img src="images/Martabak manis.jpeg" alt="Martabak">
+                        <h3>Martabak Manis</h3>
+                    </div>
+                </a>
+                <a href="#" class="category-link">
+                    <div class="category">
+                        <img src="images/Pangsit mie bakso.jpeg" alt="Pangsit Mie Bakso">
+                        <h3>Pangsit Mie Bakso</h3>
+                    </div>
+                </a>
+                <a href="#" class="category-link">
+                    <div class="category">
+                        <img src="images/Pempek Palembang.jpeg" alt="Pempek Palembang">
+                        <h3>Pempek</h3>
+                    </div>
+                </a>
+                <a href="#" class="category-link">
+                    <div class="category">
+                        <img src="images/Bakpao.jpeg" alt="Bakpao">
+                        <h3>Bakpao</h3>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -81,6 +91,20 @@
     </footer>
 
     <!-- SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const scrollWrapper = document.querySelector('.scroll-wrapper');
+    
+            scrollWrapper.addEventListener('mouseenter', () => {
+                scrollWrapper.classList.add('pause');
+            });
+    
+            scrollWrapper.addEventListener('mouseleave', () => {
+                scrollWrapper.classList.remove('pause');
+            });
+        });
+    </script>    
+
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
