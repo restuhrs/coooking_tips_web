@@ -77,8 +77,8 @@ body {
     color: #555;
 }
 .hero-img {
-    width: 80%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 350px;
     border-radius: 20px;
     margin-top: 30px;
 }
@@ -125,11 +125,14 @@ body {
     color: #333;
     font-weight: 600;
 }
-
 .scroll-wrapper {
     display: flex;
     width: max-content;
     animation: scrollLeft 15s linear infinite;
+}
+
+.scroll-wrapper.pause {
+    animation-play-state: paused;
 }
 
 @keyframes scrollLeft {
@@ -141,6 +144,16 @@ body {
     }
 }
 
+.category-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.category-link:hover .category {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+}
 
 /* TIPS MEMASAK */
 .cooking-tips {
