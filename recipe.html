@@ -38,8 +38,8 @@
     <section class="recipes">
         <div class="recipe-item">
             <h2>Resep Nasi Goreng Telur ala Thai</h2>
-            <img height="300" src="images/resep-nasi-goreng-telur-ala-thai_43.jpeg" alt="">
-            <p>Resep khas Thailand dengan rasa gurih dan lezat.</p>
+            <img height="255" src="images/resep-nasi-goreng-telur-ala-thai_43.jpeg" alt="">
+            <p>Resep khas Thailand dengan rasa yang gurih dan lezat.</p>
             <button class="toggle-button">Lihat Bahan</button>
             <ul class="ingredients hidden">
                 <li>4 sdm minyak sayur</li>
@@ -58,7 +58,7 @@
         <div class="recipe-item">
             <h2>Resep Nasi Goreng Telur 2 Bahan</h2>
             <img src="images/resep-nasi-goreng-telur_43.jpeg" alt="">
-            <p>Resep super simpel dengan hanya dua bahan utama.</p>
+            <p>Resep super simpel hanya menggunakan dua bahan utama.</p>
             <button class="toggle-button">Lihat Bahan</button>
             <ul class="ingredients hidden">
                 <li>400 g nasi putih dingin</li>
@@ -72,7 +72,7 @@
         <div class="recipe-item">
             <h2>Resep Nasi Goreng Telur Bakso</h2>
             <img src="images/resep-nasi-goreng-telur-bakso-1742362169666_43.jpeg" alt="">
-            <p>Tambahkan bakso untuk rasa yang lebih kaya!</p>
+            <p>Tambahkan bakso agar lebih nikmat!</p>
             <button class="toggle-button">Lihat Bahan</button>
             <ul class="ingredients hidden">
                 <li>400 g nasi putih dingin</li>
@@ -87,12 +87,11 @@
     </section>
 
     <footer class="footer">
-        <p>&copy; <span id="year"></span> Cooking Tips by Restu. Made with <i class="fa-solid fa-heart" style="color: red;"></i></p>
+        <p>&copy; <span id="year"></span> Cooking Tips. All Rights Reserved.</p> 
+        <!-- <i class="fa-solid fa-heart" style="color: red;"></i> -->
     </footer>
 
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-
         // Fungsi untuk menampilkan dan menyembunyikan bahan
         document.querySelectorAll(".toggle-button").forEach(button => {
             button.addEventListener("click", function () {
@@ -101,6 +100,9 @@
                 this.textContent = ingredients.classList.contains("hidden") ? "Lihat Bahan" : "Tutup Bahan";
             });
         });
+
+        //footer
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
