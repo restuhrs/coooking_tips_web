@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martabak Manis - Cooking Tips</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img width="60px" src="images/logo.jpeg" class="logo" alt="logo">
+            <h1 class="site-name">Cooking Tips</h1>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Recipe</a></li>
+                    <li><a href="tutorial.html">Tutorial</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="sign_Up.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>3 Resep Martabak Manis Enak Di Rumah</h1>
+        <img height="200" src="images/Nasi Goreng.jpeg" alt="">
+        <p>Berikut ini 3 rekomendasi resep martabak manis by Cooking Tips yang bisa Anda coba di rumah dengan mudah. <br> <br>
+            Selamat Mencoba!
+        </p>
+    </section>
+
+    <section class="recipes">
+        <div class="recipe-item">
+            <h2>Resep Martabak Manis Teflon</h2>
+            <img height="255" src="images/resep-nasi-goreng-telur-ala-thai_43.jpeg" alt="">
+            <p>Resep khas Thailand dengan rasa yang gurih dan lezat.</p>
+            <button class="toggle-button">Lihat Bahan</button>
+            <ul class="ingredients hidden">
+                <li>250 gram tepung terigu</li>
+                <li>350 ml air</li>
+                <li>1 sdm tepung tapioka</li>
+                <li>2 sdm gula pasir</li>
+                <li> ½ sdt baking powder</li>
+                <li> ½ sdt garam</li>
+                <li>1 sdt vanilla</li>
+                <li>1 butir telur</li>
+                <li>1 sdt baking soda</li>
+                <li>Mentega secukupnya</li>
+                <li>Gula pasir, sebagai taburan</li>
+            </ul>
+        </div>
+
+        <div class="recipe-item">
+            <h2>Resep Nasi Goreng Telur 2 Bahan</h2>
+            <img src="images/resep-nasi-goreng-telur_43.jpeg" alt="">
+            <p>Resep super simpel hanya menggunakan dua bahan utama.</p>
+            <button class="toggle-button">Lihat Bahan</button>
+            <ul class="ingredients hidden">
+                <li>400 g nasi putih dingin</li>
+                <li>2 butir telur ayam</li>
+                <li>2 sdm kecap asin</li>
+                <li>1/2 sdt merica bubuk</li>
+                <li>1 sdt garam</li>
+            </ul>
+        </div>
+
+        <div class="recipe-item">
+            <h2>Resep Nasi Goreng Telur Bakso</h2>
+            <img src="images/resep-nasi-goreng-telur-bakso-1742362169666_43.jpeg" alt="">
+            <p>Tambahkan bakso agar lebih nikmat!</p>
+            <button class="toggle-button">Lihat Bahan</button>
+            <ul class="ingredients hidden">
+                <li>400 g nasi putih dingin</li>
+                <li>5 siung bawang merah</li>
+                <li>3 siung bawang putih</li>
+                <li>2 butir telur</li>
+                <li>5 buah bakso sapi, iris tipis</li>
+                <li>2 sdm saus tiram</li>
+                <li>2 sdm kecap manis</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Cooking Tips. All Rights Reserved.</p> 
+        <!-- <i class="fa-solid fa-heart" style="color: red;"></i> -->
+    </footer>
+
+    <script>
+        // Fungsi untuk menampilkan dan menyembunyikan bahan
+        document.querySelectorAll(".toggle-button").forEach(button => {
+            button.addEventListener("click", function () {
+                const ingredients = this.nextElementSibling;
+                ingredients.classList.toggle("hidden");
+                this.textContent = ingredients.classList.contains("hidden") ? "Lihat Bahan" : "Tutup Bahan";
+            });
+        });
+
+        //footer
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
